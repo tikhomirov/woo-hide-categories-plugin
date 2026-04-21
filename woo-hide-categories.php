@@ -5,6 +5,7 @@
  * Version: 1.0.0
  * Author: Aleksei Tikhomirov
  * Text Domain: woo-hide-categories
+ * Domain Path: /languages
  * Requires Plugins: woocommerce
  */
 
@@ -21,6 +22,12 @@ require_once WHC_PLUGIN_DIR . 'includes/class-whc-admin.php';
 require_once WHC_PLUGIN_DIR . 'includes/class-whc-frontend.php';
 
 add_action('plugins_loaded', static function (): void {
+    load_plugin_textdomain(
+        'woo-hide-categories',
+        false,
+        dirname(plugin_basename(__FILE__)) . '/languages'
+    );
+
     $core = WHC_Plugin::getInstance();
 
     if (is_admin()) {
