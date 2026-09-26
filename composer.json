@@ -1,0 +1,16 @@
+{
+  "name": "tikhomirov/woo-hide-categories-plugin",
+  "description": "WordPress plugin woo-hide-categories-plugin",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Aleksei Tikhomirov",
+      "email": "alex@rwsite.ru",
+      "homepage": "https://rwsite.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
+}
