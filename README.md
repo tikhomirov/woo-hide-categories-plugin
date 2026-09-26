@@ -1,36 +1,48 @@
 # Woo Hide Categories
 
-Плагин для скрытия выбранных категорий и товаров этих категорий с фронта WooCommerce.
+[![WordPress Plugin](https://img.shields.io/badge/WordPress-5.0%2B-blue.svg)](https://wordpress.org/)
+[![PHP Support](https://img.shields.io/badge/PHP-7.4%20%7C%208.0%20%7C%208.1%20%7C%208.2%20%7C%208.3-777BB4.svg)](https://php.net/)
+[![License](https://img.shields.io/badge/License-GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
-## Возможности
+Hides selected WooCommerce categories and their associated products from the frontend catalog and search.
 
-### Быстрое управление в списке категорий
-- Колонка "Видимость" в таблице категорий (после чекбокса)
-- Кликабельные иконки: 🟢 видна / 🔴 скрыта
-- AJAX переключение одним кликом без перезагрузки
-- Анимация загрузки при обработке
+## Requirements
 
-### Редактирование категории
-- Чекбокс "Скрыть с фронта" на странице добавления/редактирования категории
-- Автоматическое скрытие всех товаров из скрытых категорий
-- Скрытие в виджетах категорий, каталоге, поиске
-- Кеширование для производительности
+| Component | Minimum | Tested |
+|-----------|---------|--------|
+| **WordPress** | 5.0 | 5.0 – 6.7 |
+| **PHP** | 7.4 | 7.4, 8.0, 8.1, 8.2, 8.3 |
 
-## Использование
+## Features
 
-### Быстрое переключение
-1. Перейдите в **Товары → Категории**
-2. Найдите колонку "Видимость" в таблице
-3. Кликните иконку 👁️ / 🚫 для переключения состояния
+- **Frontend Hiding:** Remove categories and products from catalog views instantly.
 
-### Редактирование категории
-1. Нажмите "Изменить" на категории
-2. Отметьте чекбокс "Скрыть с фронта"
-3. Сохраните изменения
+## Installation
 
-## Технические детали
+### Via Composer (VCS Repository)
+Add the repository to your `composer.json` and require the package:
 
-- Использует `term_meta` для хранения флага
-- Фильтры: `get_terms`, `woocommerce_product_query`, `pre_get_posts`
-- Очищает кеш при изменении категории
-- Проверка прав `manage_woocommerce` для AJAX
+```bash
+composer config repositories.tikhomirov-woo-hide-categories-plugin git https://github.com/tikhomirov/woo-hide-categories-plugin.git
+composer require tikhomirov/woo-hide-categories-plugin
+```
+
+### Manual Installation
+1. Download the latest ZIP release.
+2. Upload the plugin folder to the `/wp-content/plugins/` directory.
+3. Activate the plugin through the 'Plugins' menu in WordPress.
+
+---
+
+## Русский
+
+Скрывает выбранные категории WooCommerce и все товары этих категорий из каталога, виджетов и поиска на фронтенде.
+
+### Совместимость
+- **WordPress:** от 5.0 и выше
+- **PHP:** от 7.4 до 8.3
+
+### Возможности
+- Скрытие категорий и товаров WooCommerce от покупателей на сайте.
+
+**Установка:** подключите через Composer (VCS) или скачайте архив и активируйте в панели управления WordPress.
